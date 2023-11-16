@@ -12,7 +12,6 @@
       <span v-else class="deploy" @click="start">开始</span>
     </h2>
     <h3>mint要输入私钥，请尽量用小号私钥填充，代码开源在<a href="https://github.com/hellothread/mint-pols" target="_blank">github</a>，如担心安全问题请自行下载并部署该服务</h3>
-    <p>author: <a href="https://twitter.com/chenmin22998595" target="_blank">@chems</a></p>
     <ul>
       <li v-for="tx in confirmedTxHashs">已完成交易：<a :href="'https://polygonscan.com/tx/'+tx" target="_blank">{{ tx }}</a></li>
     </ul>
@@ -27,7 +26,7 @@ import { ethers, JsonRpcProvider, Wallet, formatEther, parseUnits } from "ethers
 
 const address = ref('')
 const privateKey = ref('')
-const web3Rpc = ref('https://polygon.blockpi.network/v1/rpc/public')
+const web3Rpc = ref('https://polygon-rpc.com')
 const gasCap = ref('800')
 const gasTip = ref('40')
 const count = ref(1)
